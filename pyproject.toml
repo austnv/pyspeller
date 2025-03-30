@@ -11,6 +11,7 @@ description = "Библиотека для проверки орфографии
 readme = "README.md"
 license = "MIT"
 license-files = ["LICENSE"]
+keywords = [ "speller", "yandex", "api" ]
 requires-python = ">=3.12"
 classifiers = [
     "Programming Language :: Python :: 3",
