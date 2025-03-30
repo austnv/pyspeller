@@ -47,7 +47,12 @@ print(pyspeller.check_texts(['Текст для проверки орфогра�
 
 ## Авторы
 
-Алексей Устинов - [@ustinov](https://gitverse.ru/ustinov)
+Алексей Устинов: 
+
+- [GitVerse](https://gitverse.ru/ustinov)
+- [GitHub](https://github.com/austnv)
+- [Instagram](https://www.instagram.com/a_ustnv/)
+- [Telegram](https://t.me/austnv)
 """
 
 from typing import Literal
