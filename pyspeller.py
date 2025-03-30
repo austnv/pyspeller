@@ -54,6 +54,9 @@ print(pyspeller.check_texts(['Текст для проверки орфогра�
 - [Instagram](https://www.instagram.com/a_ustnv/)
 - [Telegram](https://t.me/austnv)
 
+## Контакты
+
+Если у вас возникли вопросы или проблемы, вы можете связаться со мной по адресу [lesin2798@mail.ru](mailto:lesin2798@mail.ru) или в [Telegram](https://t.me/austnv).
 """
 
 from typing import Literal
