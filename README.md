@@ -43,5 +43,5 @@ print(result)
 [4]: https://yandex.ru/dev/speller/doc/dg/reference/checkTexts-docpage/
 [5]: https://yandex.ru/legal/speller_api/
 [6]: https://gitverse.ru/ustinov
-[7]: mailto://lesin2798@mail.ru?subject=yandex_speller
+[7]: mailto:lesin2798@mail.ru?subject=yandex_speller
 [8]: https://t.me/austnv?text=yandex_speller
