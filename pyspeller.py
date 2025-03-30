@@ -1,5 +1,5 @@
 """
-# yandex_speller
+# pyspeller
 
 Библиотека для проверки орфографии текста с помощью [API Яндекс.Селлер](https://yandex.ru/dev/speller/). Содержит два метода: `check_text` и `check_texts`.
 
@@ -15,12 +15,12 @@
 ## Примеры использования:
 
 ```python
-import yandex_speller
-print(yandex_speller.check_text('Текст для проверки орфографии.'))
-print(yandex_speller.check_text('Текст для проверки орфографии.', format_text='html'))
-print(yandex_speller.check_text('Текст для проверки орфографии.', lang='en'))
-print(yandex_speller.check_text('Текст для проверки орфографии.', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
-print(yandex_speller.check_text('Текст для проверки орфографии.', format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+import pyspeller
+print(pyspeller.check_text('Текст для проверки орфографии.'))
+print(pyspeller.check_text('Текст для проверки орфографии.', format_text='html'))
+print(pyspeller.check_text('Текст для проверки орфографии.', lang='en'))
+print(pyspeller.check_text('Текст для проверки орфографии.', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+print(pyspeller.check_text('Текст для проверки орфографии.', format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
 ```
 
 ## Описание параметров метода `check_texts`:
@@ -33,12 +33,12 @@ print(yandex_speller.check_text('Текст для проверки орфогр
 ## Примеры использования:
 
 ```python
-import yandex_speller
-print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.']))
-print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html'))
-print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], lang='en'))
-print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
-print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+import pyspeller
+print(pyspeller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.']))
+print(pyspeller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html'))
+print(pyspeller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], lang='en'))
+print(pyspeller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+print(pyspeller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
 ```
 
 ## Лицензия

@@ -1,4 +1,4 @@
-# yandex-speller
+# pyspeller
 
 Библиотека для проверки орфографии с использованием [API Яндекс Спеллер][я]. Обертка Python для [Яндекс.Спеллер][я].
 
@@ -7,13 +7,13 @@
 ## Установка
 
 ```bash
-pip install --index-url https://gitverse.ru/api/packages/ustinov/pypi/simple/ yandex-speller
+pip install pyspeller
 ```
 
 ## Использование
 
 ```python
-import yandex_speller as ys
+from pyspeller import *
 
 result = check_text('масква', 'ru', 'plain', ['IGNORE_URLS', 'IGNORE_DIGITS'])
 print(result)
@@ -52,7 +52,7 @@ print(result)
 [4]: https://yandex.ru/dev/speller/doc/dg/reference/checkTexts-docpage/
 [5]: https://yandex.ru/legal/speller_api/
 [6]: https://gitverse.ru/ustinov
-[7]: mailto:lesin2798@mail.ru?subject=yandex_speller
-[8]: https://t.me/austnv?text=yandex_speller
+[7]: mailto:lesin2798@mail.ru?subject=pyspeller
+[8]: https://t.me/austnv?text=pyspeller
 [9]: LICENSE
 [10]: https://ustinov.mit-license.org/
