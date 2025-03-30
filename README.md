@@ -37,6 +37,13 @@ print(result)
 - [Email][7]
 - [Telegram][8]
 
+## Лицензия
+
+[The MIT License (MIT)][9] - лицензия в репозитории
+
+[Постоянная ссылка][10] на лицензию
+
+
 
 [я]: https://yandex.ru/dev/speller/
 [1]: https://speller.yandex.net/services/spellservice?op=checkText
@@ -47,3 +54,5 @@ print(result)
 [6]: https://gitverse.ru/ustinov
 [7]: mailto:lesin2798@mail.ru?subject=yandex_speller
 [8]: https://t.me/austnv?text=yandex_speller
+[9]: /LICENSE
+[10]: https://ustinov.mit-license.org/
