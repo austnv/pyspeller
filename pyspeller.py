@@ -1,7 +1,7 @@
 """
 # pyspeller
 
-Библиотека для проверки орфографии текста с помощью [API Яндекс.Селлер](https://yandex.ru/dev/speller/). Содержит два метода: `check_text` и `check_texts`.
+Библиотека для проверки орфографии текста с помощью [API Яндекс.Спеллер](https://yandex.ru/dev/speller/). Содержит два метода: `check_text` и `check_texts`.
 
 Методы проверяют орфографию в указанном отрывке текста. Демонстрация работы метода `check_text` находится [здесь](https://speller.yandex.net/services/spellservice?op=checkText). Документация API находится [здесь](https://yandex.ru/dev/speller/doc/ru/).
 
