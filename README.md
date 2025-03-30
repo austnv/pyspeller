@@ -32,6 +32,7 @@ print(result)
 ## Контакты
 
 - [GitVerse][6]
+- [GitHub][11]
 - [Email][7]
 - [Telegram][8]
 
@@ -54,3 +55,4 @@ print(result)
 [8]: https://t.me/austnv?text=pyspeller
 [9]: LICENSE
 [10]: https://ustinov.mit-license.org/
+[11]: https://github.com/austnv
