@@ -1,3 +1,55 @@
+"""
+# yandex_speller
+
+Библиотека для проверки орфографии текста с помощью [API Яндекс.Селлер](https://yandex.ru/dev/speller/). Содержит два метода: `check_text` и `check_texts`.
+
+Методы проверяют орфографию в указанном отрывке текста. Демонстрация работы метода `check_text` находится [здесь](https://speller.yandex.net/services/spellservice?op=checkText). Документация API находится [здесь](https://yandex.ru/dev/speller/doc/ru/).
+
+## Описание параметров метода `check_text`:
+
+- `query` — Строка поискового запроса.
+- `lang` — Язык проверки орфографии (по умолчанию `ru,en`). Доступны `en`, `uk`, `ru`.
+- `format_text` — Формат текста (по умолчанию `plain`). Доступны `plain`, `html`.
+- `options` — Дополнительные опции проверки орфографии (по умолчанию `None`). Доступны `IGNORE_DIGITS`, `IGNORE_URLS`, `FIND_REPEAT_WORDS`, `IGNORE_CAPITALIZATION`.
+
+## Примеры использования:
+
+```python
+import yandex_speller
+print(yandex_speller.check_text('Текст для проверки орфографии.'))
+print(yandex_speller.check_text('Текст для проверки орфографии.', format_text='html'))
+print(yandex_speller.check_text('Текст для проверки орфографии.', lang='en'))
+print(yandex_speller.check_text('Текст для проверки орфографии.', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+print(yandex_speller.check_text('Текст для проверки орфографии.', format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+```
+
+## Описание параметров метода `check_texts`:
+
+- `query` — Список строк поисковых запросов.
+- `lang` — Язык проверки орфографии (по умолчанию `ru,en`). Доступны `en`, `uk`, `ru`.
+- `format_text` — Формат текста (по умолчанию `plain`). Доступны `plain`, `html`.
+- `options` — Дополнительные опции проверки орфографии (по умолчанию `None`). Доступны `IGNORE_DIGITS`, `IGNORE_URLS`, `FIND_REPEAT_WORDS`, `IGNORE_CAPITALIZATION`.
+
+## Примеры использования:
+
+```python
+import yandex_speller
+print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.']))
+print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html'))
+print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], lang='en'))
+print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+print(yandex_speller.check_texts(['Текст для проверки орфографии.', 'Текст для проверки орфографии.'], format_text='html', options=['IGNORE_DIGITS', 'IGNORE_URLS', 'FIND_REPEAT_WORDS', 'IGNORE_CAPITALIZATION']))
+```
+
+## Лицензия
+
+[MIT License](https://ustinov.mit-license.org/)
+
+## Авторы
+
+Алексей Устинов - [@ustinov](https://gitverse.ru/ustinov)
+"""
+
 from typing import Literal
 import requests
 
