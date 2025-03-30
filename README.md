@@ -7,7 +7,7 @@
 ## Установка
 
 ```bash
-pip install yandex_speller
+pip install --index-url https://gitverse.ru/api/packages/ustinov/pypi/simple/ yandex-speller
 ```
 
 ## Использование
@@ -54,5 +54,5 @@ print(result)
 [6]: https://gitverse.ru/ustinov
 [7]: mailto:lesin2798@mail.ru?subject=yandex_speller
 [8]: https://t.me/austnv?text=yandex_speller
-[9]: /LICENSE
+[9]: LICENSE
 [10]: https://ustinov.mit-license.org/
