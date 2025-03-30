@@ -53,6 +53,7 @@ print(pyspeller.check_texts(['Текст для проверки орфогра�
 - [GitHub](https://github.com/austnv)
 - [Instagram](https://www.instagram.com/a_ustnv/)
 - [Telegram](https://t.me/austnv)
+
 """
 
 from typing import Literal
