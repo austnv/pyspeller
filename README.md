@@ -4,8 +4,10 @@
 
 ## Установка
 
+В процессе публикации на PyPi. В данный момент можно клонировать репозиторий:
+
 ```bash
-pip install pyspeller
+git clone https://github.com/austnv/pyspeller.git
 ```
 
 ## Использование
