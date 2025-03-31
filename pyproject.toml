@@ -19,5 +19,5 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 [project.urls]
-Repository = "https://gitverse.ru/ustinov/pyspeller"
+Repository = "https://github.com/austnv/pyspeller/"
 Issues = "https://github.com/austnv/pyspeller/issues"
