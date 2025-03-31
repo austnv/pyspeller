@@ -5,15 +5,15 @@
 ## Установка
 
 ```bash
+pip install pyspeller
+```
+
+```bash
 git clone https://github.com/austnv/pyspeller.git
 ```
 
 ```bash
 git clone https://gitverse.ru/ustinov/pyspeller.git
-```
-
-```bash
-pip install pyspeller
 ```
 
 ## Использование
