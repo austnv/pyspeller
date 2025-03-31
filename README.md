@@ -10,10 +10,8 @@ pip install pyspeller
 
 ```bash
 git clone https://github.com/austnv/pyspeller.git
-```
-
-```bash
-git clone https://gitverse.ru/ustinov/pyspeller.git
+cd pyspeller
+python setup.py
 ```
 
 ## Использование
