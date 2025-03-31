@@ -43,7 +43,7 @@ print(pyspeller.check_texts(['Текст для проверки орфогра�
 
 ## Лицензия
 
-[MIT License](https://github.com/austnv/pyspeller/raw/refs/heads/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/austnv/pyspeller/refs/heads/master/LICENSE)
 
 ## Авторы
 
