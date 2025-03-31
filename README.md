@@ -38,9 +38,7 @@ print(result)
 
 ## Лицензия
 
-[The MIT License (MIT)][9] - лицензия в репозитории
-
-[Постоянная ссылка][10] на лицензию
+[The MIT License (MIT)][9]
 
 
 
