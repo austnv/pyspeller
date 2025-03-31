@@ -43,14 +43,14 @@ print(pyspeller.check_texts(['Текст для проверки орфогра�
 
 ## Лицензия
 
-[MIT License](https://ustinov.mit-license.org/)
+[MIT License](https://github.com/austnv/pyspeller/raw/refs/heads/master/LICENSE)
 
 ## Авторы
 
 Алексей Устинов: 
 
-- [GitVerse](https://gitverse.ru/ustinov)
 - [GitHub](https://github.com/austnv)
+- [GitVerse](https://gitverse.ru/ustinov)
 - [Instagram](https://www.instagram.com/a_ustnv/)
 - [Telegram](https://t.me/austnv)
 
