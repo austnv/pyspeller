@@ -2,6 +2,13 @@
 
 Библиотека для проверки орфографии с использованием [API Яндекс Спеллер][я]. Обертка Python для [Яндекс.Спеллер][я].
 
+![PyPI - Downloads](https://img.shields.io/pypi/dm/pyspeller?logo=pypi&color=red)
+![PyPI - License](https://img.shields.io/pypi/l/pyspeller)
+![PyPI - Version](https://img.shields.io/pypi/v/pyspeller)
+![GitHub last commit](https://img.shields.io/github/last-commit/austnv/pyspeller)
+
+
+
 ## Установка
 
 ```bash
