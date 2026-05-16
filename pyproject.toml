@@ -9,6 +9,28 @@ dependencies = [
     "pydantic>=2.13.4",
 ]
 keywords = ["yandex", "speller", "api", "spellcheck", "python", "async"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Education",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Text Processing :: General",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Utilities",
+    "Typing :: Typed",
+]
 
 [build-system]
 requires = ["hatchling"]
@@ -16,3 +38,9 @@ build-backend = "hatchling.build"
 
 [tool.hatch.version]
 path = "pyspeller/__about__.py"
+
+[project.urls]
+Homepage = "https://github.com/austnv/pyspeller"
+Documentation = "https://github.com/austnv/pyspeller#readme"
+Issues = "https://github.com/austnv/pyspeller/issues"
+Repository = "https://github.com/austnv/pyspeller"

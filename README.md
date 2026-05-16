@@ -1,10 +1,12 @@
 # 🐝 PySpeller
 
-[![PyPI version](https://img.shields.io/pypi/v/pyspeller?color=blue&label=PyPI)](https://pypi.org/project/pyspeller/)
-[![Python versions](https://img.shields.io/pypi/pyversions/pyspeller?color=red&label=Python)](https://pypi.org/project/pyspeller/)
-[![License](https://img.shields.io/github/license/austnv/pyspeller?color=green)](https://github.com/austnv/pyspeller/blob/main/LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/austnv/pyspeller?style=social)](https://github.com/austnv/pyspeller/stargazers)
-[![Downloads](https://img.shields.io/pypi/dm/pyspeller?color=purple)](https://pypi.org/project/pyspeller/)
+<p align="center">
+  <a href="https://pypi.org/project/pyspeller/"><img src="https://img.shields.io/pypi/v/pyspeller?color=blue&label=PyPI&logo=pypi" alt="PyPI version"></a>
+  <a href="https://pypi.org/project/pyspeller/"><img src="https://img.shields.io/pypi/pyversions/pyspeller?color=red&label=Python&logo=python" alt="Python versions"></a>
+  <a href="https://github.com/austnv/pyspeller/blob/main/LICENSE"><img src="https://img.shields.io/github/license/austnv/pyspeller?color=green" alt="License"></a>
+  <a href="https://pypi.org/project/pyspeller/"><img src="https://img.shields.io/pypi/dm/pyspeller?color=purple" alt="Downloads"></a>
+  <a href="https://github.com/austnv/pyspeller/stargazers"><img src="https://img.shields.io/github/stars/austnv/pyspeller?style=social" alt="Stars"></a>
+</p>
 
 Простая и легковесная библиотека-обёртка для [API Яндекс.Спеллера](https://yandex.ru/dev/speller/). Предоставляет синхронный и асинхронный клиенты, строгую типизацию через Pydantic, и удобные функции-помощники для быстрой проверки текста.
 
