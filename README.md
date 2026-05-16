@@ -1,67 +1,179 @@
-# pyspeller
+# 🐝 PySpeller
 
-Библиотека для проверки орфографии с использованием [API Яндекс Спеллер][я]. Обертка Python для [Яндекс.Спеллер][я].
+[![PyPI version](https://img.shields.io/pypi/v/pyspeller?color=blue&label=PyPI)](https://pypi.org/project/pyspeller/)
+[![Python versions](https://img.shields.io/pypi/pyversions/pyspeller?color=red&label=Python)](https://pypi.org/project/pyspeller/)
+[![License](https://img.shields.io/github/license/austnv/pyspeller?color=green)](https://github.com/austnv/pyspeller/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/austnv/pyspeller?style=social)](https://github.com/austnv/pyspeller/stargazers)
+[![Downloads](https://img.shields.io/pypi/dm/pyspeller?color=purple)](https://pypi.org/project/pyspeller/)
 
-![PyPI - Downloads](https://img.shields.io/pypi/dm/pyspeller?logo=pypi&color=red)
-![PyPI - License](https://img.shields.io/pypi/l/pyspeller)
-![PyPI - Version](https://img.shields.io/pypi/v/pyspeller)
-![GitHub last commit](https://img.shields.io/github/last-commit/austnv/pyspeller)
+Простая и легковесная библиотека-обёртка для [API Яндекс.Спеллера](https://yandex.ru/dev/speller/). Предоставляет синхронный и асинхронный клиенты, строгую типизацию через Pydantic, и удобные функции-помощники для быстрой проверки текста.
 
+## ✨ Возможности
 
+-   ✅ Проверка одного текста или списка текстов (метод `checkTexts`)
+-   ⚡ Синхронный и асинхронный режимы (на базе `httpx`)
+-   🎛️ Поддержка всех [опций Яндекс.Спеллера](https://yandex.ru/dev/speller/doc/ru/reference/speller-options) (игнорирование URL, цифр, повторов и т.д.)
+-   🧠 Автоматическое управление HTTP-сессиями — создаются и закрываются при каждом вызове, не требуется использовать контекстный менеджер
+-   📦 Типизированные модели ответов на основе Pydantic v2
+-   🚨 Понятные исключения для ошибок API и сетевых проблем
+-   🪶 Минимум зависимостей: только `httpx` и `pydantic`
 
-## Установка
+## 📦 Установка
 
 ```bash
 pip install pyspeller
 ```
 
+или с помощью `uv`:
+
 ```bash
-pip install git+https://github.com/austnv/pyspeller.git
+uv add pyspeller
 ```
 
-## Использование
+Для работы требуется **Python 3.9** или новее.
+
+## 🚀 Быстрый старт
+
+### Синхронная проверка
 
 ```python
-from pyspeller import *
+from pyspeller import check_text
 
-result = check_text('масква', 'ru', 'plain', ['IGNORE_URLS', 'IGNORE_DIGITS'])
-print(result)
-
-result = check_texts(['синхрафазатрон', 'олексей'])
-print(result)
+result = check_text("Превед, медвед!")
+if result.errors:
+    print(result.errors[0].suggestions)  # ['Привет']
 ```
 
-## Документация
+### Асинхронная проверка
 
-- [Страница][1] для демонстрации работы метода `check_text`.
-- [Документация][3] для метода `check_text`.
-- [Страница][2] для демонстрации работы метода `check_texts`.
-- [Документация][4] для метода `check_texts`.
-- [Условия использования][5] сервиса «API Яндекс.Спеллер»
+```python
+import asyncio
+from pyspeller import async_check_text
 
+async def main():
+    res = await async_check_text("синхрафазатрон")
+    print(res.errors[0].suggestions)  # ['синхрофазотрон']
 
-## Контакты
+asyncio.run(main())
+```
 
-- [GitVerse][6]
-- [GitHub][11]
-- [Email][7]
-- [Telegram][8]
+### Проверка списка текстов
 
-## Лицензия
+```python
+from pyspeller import check_texts
 
-[The MIT License (MIT)][9]
+results = check_texts(["очепятка", "дубне"])
+for text_result in results.results:
+    for error in text_result.errors:
+        print(f"Слово '{error.word}' → {error.suggestions}")
+```
 
+## ⚙️ Опции проверки
 
+Все [опции Яндекс.Спеллера](https://yandex.ru/dev/speller/doc/ru/reference/speller-options) доступны через перечисление `SpellerOptions`. Их можно комбинировать с помощью побитового ИЛИ (`|`).
 
-[я]: https://yandex.ru/dev/speller/
-[1]: https://speller.yandex.net/services/spellservice?op=checkText
-[2]: https://speller.yandex.net/services/spellservice?op=checkTexts
-[3]: https://yandex.ru/dev/speller/doc/dg/reference/checkText-docpage/
-[4]: https://yandex.ru/dev/speller/doc/dg/reference/checkTexts-docpage/
-[5]: https://yandex.ru/legal/speller_api/
-[6]: https://gitverse.ru/ustinov
-[7]: mailto:lesin2798@mail.ru?subject=pyspeller
-[8]: https://t.me/austnv?text=pyspeller
-[9]: LICENSE
-[10]: https://ustinov.mit-license.org/
-[11]: https://github.com/austnv
+```python
+from pyspeller import check_text, SpellerOptions
+
+result = check_text(
+    "мой сайт http://example.com и номер R2D2",
+    options=SpellerOptions.IGNORE_URLS | SpellerOptions.IGNORE_DIGITS
+)
+
+# Или импортировать опции напрямую
+
+from pyspeller import check_text, IGNORE_URLS, IGNORE_DIGITS
+
+result = check_text(
+    "мой сайт http://example.com и номер R2D2",
+    options=IGNORE_URLS | IGNORE_DIGITS
+)
+```
+
+### Доступные опции
+
+| Константа                 | Число | Описание                                |
+|---------------------------|-------|-----------------------------------------|
+| `IGNORE_DIGITS`           | 2     | Пропускать слова с цифрами              |
+| `IGNORE_URLS`             | 4     | Пропускать интернет-адреса и e‑mail     |
+| `FIND_REPEAT_WORDS`       | 8     | Находить повторяющиеся подряд слова     |
+| `IGNORE_CAPITALIZATION`   | 512   | Игнорировать неверное использование заглавных букв |
+
+При необходимости можно передать произвольное целое число.
+
+## 📖 API
+
+### Клиенты
+
+#### `YandexSpeller(lang="ru,en", options=0, format="plain")`
+
+Синхронный клиент.
+
+**Методы:**
+
+-   `check_text(text: str) -> CheckTextResponse`
+-   `check_texts(texts: List[str]) -> CheckTextsResponse`
+
+#### `AsyncYandexSpeller(lang="ru,en", options=0, format="plain")`
+
+Асинхронный клиент. Методы аналогичны синхронному, но возвращают корутины.
+
+### Удобные функции
+
+```python
+# Синхронные
+check_text(text, lang="ru,en", options=0, format="plain") -> CheckTextResponse
+check_texts(texts, ...) -> CheckTextsResponse
+
+# Асинхронные
+async_check_text(text, ...) -> CheckTextResponse
+async_check_texts(texts, ...) -> CheckTextsResponse
+```
+
+Все функции автоматически создают и закрывают сессию, поэтому их можно вызывать без дополнительного управления.
+
+### Модели данных
+
+#### `SpellResult` — одна найденная ошибка
+
+| Поле         | Тип        | Описание                                     |
+|--------------|------------|----------------------------------------------|
+| `code`       | `int`      | Код ошибки (1 – нет в словаре, 3 – регистр) |
+| `pos`        | `int`      | Позиция слова в тексте (символы)            |
+| `row`        | `int`      | Номер строки                                 |
+| `col`        | `int`      | Номер символа в строке                       |
+| `length`     | `int`      | Длина ошибочного слова                       |
+| `word`       | `str`      | Само слово                                   |
+| `suggestions`| `List[str]`| Варианты исправления                         |
+
+#### `CheckTextResponse` — результат проверки одного текста
+
+-   `errors: List[SpellResult]`
+
+#### `CheckTextsResponse` — результат проверки нескольких текстов
+
+-   `results: List[CheckTextResponse]`
+
+### Исключения
+
+Все исключения наследуются от `SpellerError`.
+
+-   `SpellerAPIError(status_code: int, message: str)` – ошибка API (HTTP 4xx/5xx).
+-   `SpellerNetworkError(original_exception: Exception)` – сетевая ошибка (таймаут, DNS и т.п.).
+
+## 🛠️ Разработка
+
+```bash
+git clone https://github.com/austnv/pyspeller.git
+cd pyspeller
+uv sync --group dev
+uv run pytest tests/ -v
+```
+
+## 📄 Лицензия
+
+Проект распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
+
+---
+
+Сделано с ❤️ для проверки орфографии через Яндекс.Спеллер.
