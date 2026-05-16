@@ -1,26 +1,6 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
 [project]
 name = "pyspeller"
-version = "1.0.0"
-authors = [
-    { name="Алексей Устинов", email="lesin2798@mail.ru" },
-]
-description = "Библиотека для проверки орфографии с использованием API Яндекс Спеллер. Обертка Python для Яндекс.Спеллер."
+version = "2.0.0"
+description = "Библиотека для проверки орфографии с использованием API Яндекс Спеллер"
 readme = "README.md"
-license = "MIT"
-license-files = ["LICENSE"]
-keywords = [ "speller", "yandex", "api" ]
-requires-python = ">=3.12"
-classifiers = [
-    "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: OS Independent",
-]
-[project.urls]
-Repository = "https://github.com/austnv/pyspeller"
-Issues = "https://github.com/austnv/pyspeller/issues"
-Homepage = "https://github.com/austnv/pyspeller"
-Changelog = "https://github.com/austnv/pyspeller/releases"
-Documentation = "https://github.com/austnv/pyspeller/wiki"
+requires-python = ">=3.9"
